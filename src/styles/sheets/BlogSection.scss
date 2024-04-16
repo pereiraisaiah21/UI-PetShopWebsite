@@ -1,0 +1,103 @@
+.BlogSection {
+    padding: 3rem 1rem 5rem;
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__subtitle {
+        font-size: .9rem;
+        margin-bottom: .3rem;
+        color: #333;
+    }
+    
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #333;
+    }
+    
+    &__view-more {
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        border: 1px solid #0e0f58;
+        color: #0e0f58;
+        background-color: unset;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    &__view-more:hover {
+        background-color: #0056b3;
+    }
+    
+    &__posts {
+        display: flex;
+        gap: 20px;
+
+        @media(max-width: 768px) {
+            flex-wrap: wrap;
+        }
+    }
+    
+    &__post {
+        width: 100%;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #fff;
+        text-decoration: none;
+        flex-grow: 1;
+        color: #333;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    &__post:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    &__post-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    
+    &__post-info {
+        margin-top: 10px;
+        padding: .3rem;
+    }
+    
+    &__post-name {
+        margin: .5rem 0;
+        font-weight: 800;
+    }
+    
+    &__post-type {
+        font-size: .8rem;
+        font-weight: 800;
+        color: #555;
+        background-color: #007bff;
+        width: fit-content;
+        border-radius: 15px;
+        padding: .4rem .8rem;
+        color: white;
+        margin-bottom: .8rem;
+    }
+    
+    &__post-description {
+        font-size: .9rem;
+        line-height: 1.3rem;
+    }
+}

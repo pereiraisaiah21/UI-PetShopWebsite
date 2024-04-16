@@ -1,0 +1,129 @@
+.product-detail {
+    background-color: #f5f3f3;
+    display: flex;
+    padding: 6rem 0;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        background-size: cover;
+        padding: 1rem;
+        border: 1px solid gray;
+        border-radius: 20px;
+
+        @media(max-width: 768px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__left {
+        width: 50%;
+
+        .swiper-wrapper {
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+        }
+
+        .swiper-container-thumbs {
+            margin-top: 10px;
+        }
+
+        .additional {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(245, 206, 163);
+            padding: .4rem .2rem;
+            margin-top: 1.5rem;
+            font-size: .9rem;
+            font-weight: bold;
+            color: #333;
+            border-radius: 8px;
+        }
+    }
+
+    &__right {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #333;
+
+        .breadcrumb {
+            font-size: .8rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .sku {
+            font-size: .8rem;
+            color: #807d7d;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+
+            button {
+                padding: 10px 20px;
+                cursor: pointer;
+                border: none;
+                color: #fff;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+                border: 1px solid;
+                border-radius: 20px;
+            }
+
+            .buy-btn {
+                background-color: #0e0f58;
+                color: #fff;
+                margin-right: 10px;
+            }
+
+            .add-to-cart-btn {
+                background-color: unset;
+                color: #333;
+            }
+        }
+    }
+
+    &__left,
+    &__right {
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__carousel {
+        margin-top: 20px;
+        .swiper-wrapper {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    &__thumbs {
+        padding: 1rem 0 0;
+    }
+}

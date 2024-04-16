@@ -1,0 +1,48 @@
+.CarouselSection {
+    padding: 20px;
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    &__title {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    &__view-all {
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        border: 1px solid #0e0f58;
+        color: #0e0f58;
+        background-color: unset;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    &__view-all:hover {
+        background-color: #0056b3;
+    }
+    
+    &__anchor {
+        display: inline-flex;
+        align-items: center;
+        height: 200px;
+    }
+    
+    &__slide {
+        position: relative;
+    }
+    
+    &__image {
+        width: 130px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
