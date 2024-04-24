@@ -54,6 +54,7 @@
         border-radius: 10px;
         background-color: rgb(29, 46, 78);
         color: white;
+        cursor: pointer;
     }
     
     &__newsletter-input,
@@ -124,5 +125,8 @@
     
     &__logo {
         font-weight: bold;
+        img {
+            max-width: 100px;
+        }
     }
 }

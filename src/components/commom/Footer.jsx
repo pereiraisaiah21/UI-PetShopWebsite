@@ -36,7 +36,9 @@ const Footer = () => {
         </div>
         <div className="Footer__bottom">
           <div className="Footer__rights">© 2024 Todos os direitos reservados</div>
-          <div className="Footer__logo">Logo</div>
+          <div className="Footer__logo">
+            <img src="/public/images/Logo.png" alt="Logo" />
+          </div>
           <div className="Footer__terms">
             <a href="/privacidade">Termos de Privacidade</a>
             <a href="/politicas">Políticas</a>

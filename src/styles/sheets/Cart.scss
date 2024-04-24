@@ -1,0 +1,21 @@
+.cart {
+    &-detail {
+        display: flex;
+        padding: 6rem 0;
+        color: red;
+    }
+
+    &__products {
+        flex-grow: 1;
+    }
+
+    &__item {}
+
+    .ProductSection {
+        &__info {}
+
+        &__productName {}
+
+        &__productPrice {}
+    }
+}

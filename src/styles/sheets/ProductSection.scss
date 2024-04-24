@@ -52,6 +52,7 @@
         background-color: #fff;
         transition: box-shadow 0.3s ease;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
         
         @media(max-width: 768px) {
             width: calc(50% - .5rem);
