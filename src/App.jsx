@@ -10,41 +10,7 @@ import "./styles/main.scss"
 import ProductDetail from './pages/ProductDetail'
 import ShoppingCartPage from './pages/ShoppingCartPage'
 import Category from './pages/Category'
-
-import { initializeApp } from 'firebase/app'
-import { getDatabase, ref, get, set, push } from 'firebase/database'
-
-
-
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-const usersRef = ref(database, 'usuarios')
-
-const userData = {
-  nome: "Maria Oliveira",
-  email: "maria@example.com"
-}
-
-get(usersRef)
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      console.log(snapshot.val());
-    } else {
-      console.log("No data available");
-    }
-  })
-  .catch((error) => {
-    console.error("Error getting data:", error)
-  })
-
-const newUserDataRef = push(usersRef);
-set(newUserDataRef, userData)
-  .then(() => {
-    console.log("Dados adicionados com sucesso.");
-  })
-  .catch((error) => {
-    console.error("Erro ao adicionar dados:", error);
-  });
+import { getDataFromFolder, addDataToFolder } from './utils/firebase'
 
 const router = createBrowserRouter([
   {
@@ -66,6 +32,33 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+
+  useEffect(() => {
+    getDataFromFolder('products')
+      .then(snapshot => {
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+      })
+      .catch(error => {
+        console.error("Error getting data:", error)
+      })
+
+    // const userData = {
+    //   nome: "Maria Oliveira",
+    //   email: "maria@example.com"
+    // }
+
+    // addDataToFolder('usuarios', userData)
+    //   .then(() => {
+    //     console.log("Dados adicionados com sucesso.")
+    //   })
+    //   .catch((error) => {
+    //     console.error("Erro ao adicionar dados:", error)
+    //   })
+  }, [])
 
   return (
     <>

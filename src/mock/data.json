@@ -1,0 +1,51 @@
+{
+    "products": {
+        "0": {
+            "name": "Produto 1",
+            "image": "/public/images/products/p1.png",
+            "description": "Descrição do Produto 1",
+            "price": "$19.99",
+            "categories": []
+        },
+        "1": {
+            "name": "Produto 2",
+            "image": "/public/images/products/p1.png",
+            "description": "Descrição do Produto 2",
+            "price": "$19.99",
+            "categories": []
+        }
+    },
+    "images": {
+        "0": "https://placeholder.co/300",
+        "1": "https://placeholder.co/300",
+        "2": "https://placeholder.co/300",
+        "3": "https://placeholder.co/300"
+    },
+    "categories": {
+        "0": {
+            "name": "Home",
+            "url": "/home",
+            "content": [
+                0,
+                1
+            ]
+        }
+    },
+    "home-sections": {
+        "0": {
+            "type": "banner",
+            "order": 0,
+            "content": [
+                0
+            ]
+        },
+        "1": {
+            "type": "product",
+            "order": 1,
+            "content": [
+                0,
+                1
+            ]
+        }
+    }
+}
