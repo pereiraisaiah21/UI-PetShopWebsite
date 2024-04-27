@@ -9,7 +9,49 @@
         },
         "1": {
             "name": "Produto 2",
-            "image": "/public/images/products/p1.png",
+            "image": "/public/images/products/p6.png",
+            "description": "Descrição do Produto 2",
+            "price": "$19.99",
+            "categories": []
+        },
+        "2": {
+            "name": "Produto 2",
+            "image": "/public/images/products/p2.png",
+            "description": "Descrição do Produto 2",
+            "price": "$19.99",
+            "categories": []
+        },
+        "3": {
+            "name": "Produto 2",
+            "image": "/public/images/products/p3.png",
+            "description": "Descrição do Produto 2",
+            "price": "$19.99",
+            "categories": []
+        },
+        "4": {
+            "name": "Produto 2",
+            "image": "/public/images/products/p4.png",
+            "description": "Descrição do Produto 2",
+            "price": "$19.99",
+            "categories": []
+        },
+        "5": {
+            "name": "Produto 2",
+            "image": "/public/images/products/p6.png",
+            "description": "Descrição do Produto 2",
+            "price": "$19.99",
+            "categories": []
+        },
+        "6": {
+            "name": "Produto 2",
+            "image": "/public/images/products/p2.png",
+            "description": "Descrição do Produto 2",
+            "price": "$19.99",
+            "categories": []
+        },
+        "7": {
+            "name": "Produto 2",
+            "image": "/public/images/products/p3.png",
             "description": "Descrição do Produto 2",
             "price": "$19.99",
             "categories": []
@@ -44,7 +86,13 @@
             "order": 1,
             "content": [
                 0,
-                1
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
             ]
         }
     }
