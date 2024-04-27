@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Header from './components/commom/Header'
 import Footer from './components/commom/Footer'
+import { useEffect } from 'react'
 
 import Home from './pages/Home'
 
@@ -10,24 +11,59 @@ import ProductDetail from './pages/ProductDetail'
 import ShoppingCartPage from './pages/ShoppingCartPage'
 import Category from './pages/Category'
 
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Home />
-    },
-    {
-      path: '/product/:id',
-      element: <ProductDetail />
-    },
-    {
-      path: '/cart',
-      element: <ShoppingCartPage />
-    },
-    {
-      path: '/category',
-      element: <Category />
-    },
-  ])
+import { initializeApp } from 'firebase/app'
+import { getDatabase, ref, get, set, push } from 'firebase/database'
+
+
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const usersRef = ref(database, 'usuarios')
+
+const userData = {
+  nome: "Maria Oliveira",
+  email: "maria@example.com"
+}
+
+get(usersRef)
+  .then((snapshot) => {
+    if (snapshot.exists()) {
+      console.log(snapshot.val());
+    } else {
+      console.log("No data available");
+    }
+  })
+  .catch((error) => {
+    console.error("Error getting data:", error)
+  })
+
+const newUserDataRef = push(usersRef);
+set(newUserDataRef, userData)
+  .then(() => {
+    console.log("Dados adicionados com sucesso.");
+  })
+  .catch((error) => {
+    console.error("Erro ao adicionar dados:", error);
+  });
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/product/:id',
+    element: <ProductDetail />
+  },
+  {
+    path: '/cart',
+    element: <ShoppingCartPage />
+  },
+  {
+    path: '/category',
+    element: <Category />
+  },
+])
 
 function App() {
 
