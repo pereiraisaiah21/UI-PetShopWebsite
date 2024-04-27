@@ -41,8 +41,8 @@ const Supplier = () => {
             },
           }}
         >
-          {carouselItems.map((item) => (
-            <SwiperSlide key={item.id} className="CarouselSection__slide">
+          {carouselItems.map((item, key) => (
+            <SwiperSlide key={key} className="CarouselSection__slide">
               <a href={item.link} className="CarouselSection__anchor">
                 <img src={item.image} alt={`Item ${item.id}`} className="CarouselSection__image" />
               </a>

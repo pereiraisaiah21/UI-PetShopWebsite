@@ -47,8 +47,8 @@ const BlogSection = () => {
           <button className="BlogSection__view-more">Veja mais</button>
         </div>
         <div className="BlogSection__posts">
-          {blogPosts.map((post) => (
-            <a key={post.id} href={post.link} className="BlogSection__post">
+          {blogPosts.map((post, index) => (
+            <a key={index} href={post.link} className="BlogSection__post">
               <img src={post.image} alt={`Post ${post.id}`} className="BlogSection__post-image" />
               <div className="BlogSection__post-info">
                 <p className="BlogSection__post-type">{post.type}</p>
