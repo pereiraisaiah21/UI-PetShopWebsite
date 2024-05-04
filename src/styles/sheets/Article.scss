@@ -1,0 +1,17 @@
+.article {
+    padding: 7rem 1rem;
+    color: black;
+
+    &__header {
+
+    }
+    &__title {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    &__content {
+        padding: 3rem 0;
+        line-height: 1.5rem;
+    }
+    &__footer {}
+}

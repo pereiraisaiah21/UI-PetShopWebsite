@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import ProductDetail from './pages/ProductDetail'
 import ShoppingCartPage from './pages/ShoppingCartPage'
 import Category from './pages/Category'
+import Article from './pages/Article'
 import "./styles/main.scss"
 
 import { FirebaseContext } from './utils/firebaseContext'
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     {
         path: '/category/:category',
         element: <Category />
+    },
+    {
+        path: '/article/:article',
+        element: <Article />
     },
 ])
 
