@@ -13,6 +13,8 @@
 
         @media(max-width: 768px) {
             flex-wrap: wrap;
+            width: 100%;
+            border: unset;
         }
     }
 
@@ -51,6 +53,10 @@
         padding: 20px;
         box-sizing: border-box;
         color: #333;
+
+        @media(max-width: 768px) {
+           padding: 2rem 0;
+        }
 
         .breadcrumb {
             font-size: .8rem;
@@ -113,6 +119,11 @@
 
     &__carousel {
         margin-top: 20px;
+
+        @media(max-width: 768px) {
+            display: none;
+        }
+
         .swiper-wrapper {
             img {
                 width: 100%;

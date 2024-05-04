@@ -6,8 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/swiper-bundle.css'
 
-// SwiperCore.use([Navigation, Thumbs])
-
 const ProductDetail = () => {
 
     let { id } = useParams()
@@ -43,7 +41,6 @@ const ProductDetail = () => {
                             <SwiperSlide>
                                 <img src="http://placeholder.co/800" alt="Imagem 2" />
                             </SwiperSlide>
-                            {/* Adicione mais slides conforme necessário */}
                         </Swiper>
                         <Swiper
                             className="product-detail__thumbs"
